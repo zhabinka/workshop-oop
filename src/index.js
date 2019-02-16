@@ -3,22 +3,29 @@ import axios from 'axios';
 
 const geoService = 'http://ip-api.com';
 
-const getInfoByIp = (yourIp = '37.214.79.98') => {
-  if (!yourIp || yourIp === '37.214.79.98') { // hardcore
-    console.log('Error! You did not enter ip. Continue with 37.214.79.98.');
-  }
+const infoFromRequest = (ip) => {
+  const url = `${geoService}/json/${ip}`;
 
-  const url = `${geoService}/json/${yourIp}`;
-
-  const infoFromRequest = axios.get(url)
+  axios.get(url)
     .then((response) => {
       const { data } = response;
 
-      console.log(`Your country: ${data.country}`);
-      return data;
+      console.log(data);
+    })
+    .catch(() => {
+      console.log('error!!!!!'); // don't work
     });
+};
 
-  return infoFromRequest; // Promise { <pending> } Как извлечь и использовать?
+const getInfoByIp = (userIp) => {
+  if (!userIp) {
+    console.log('Error! You did not enter ip. Continue with 134.234.3.2.');
+  }
+  const currentIp = !userIp ? '134.234.3.2' : userIp; // hardcore
+
+  (async () => {
+    await infoFromRequest(currentIp);
+  })();
 };
 
 export default getInfoByIp;
