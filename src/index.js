@@ -15,7 +15,7 @@ const getInfoByIp = (yourIp = '37.214.79.98') => {
       const { data } = response;
 
       console.log(`Your country: ${data.country}`);
-      return data.country;
+      return data;
     });
 
   return infoFromRequest; // Promise { <pending> } Как извлечь и использовать?
