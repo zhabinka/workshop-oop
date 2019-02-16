@@ -2,6 +2,8 @@ install: install-deps
 
 run:
 	npx babel-node -- 'src/bin/getgeo.js' 37.214.79.98
+run default:
+	npx babel-node -- 'src/bin/getgeo.js'
 
 install-deps:
 	npm install

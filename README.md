@@ -9,8 +9,9 @@
 $ make install
 ```
 
-## Run tests
+## Used
 
 ```sh
-$ make test
+$ make run
+$ make run default
 ```
