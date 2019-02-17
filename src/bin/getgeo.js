@@ -1,12 +1,4 @@
 #!/usr/bin/env node
-import program from 'commander';
-import getInfoByIp from '..';
+import runGeo from '../cli';
 
-program
-  .version('0.0.2')
-  .arguments('[ip]')
-  .description('Returns geo information to ip address')
-  .action((ip) => {
-    console.log(getInfoByIp(ip));
-  })
-  .parse(process.argv);
+runGeo();
