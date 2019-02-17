@@ -1,10 +1,11 @@
 import program from 'commander';
+import { description, version } from '../package.json';
 import getInfoByIp from '.';
 
 program
-  .version('0.0.2')
+  .version(version)
+  .description(description)
   .arguments('[ip]')
-  .description('Returns geo information to ip address')
   .action((ip) => {
     console.log(getInfoByIp(ip));
   });

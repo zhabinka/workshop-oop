@@ -1,7 +1,7 @@
 {
-  "name": "workshop-package",
+  "name": "oop6",
   "version": "0.0.1",
-  "description": "",
+  "description": "Returns geo information to ip address",
   "main": "dist/getgeo.js",
   "bin": {
     "get-geo": "dist/bin/getgeo.js"
