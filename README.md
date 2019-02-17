@@ -13,5 +13,5 @@ $ make install
 
 ```sh
 $ make run
-$ make run default
+$ make default
 ```
