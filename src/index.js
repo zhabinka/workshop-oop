@@ -6,7 +6,7 @@ const geoService = 'http://ip-api.com';
 async function getInfoByIp(ip = '') {
   const url = `${geoService}/json/${ip}`;
   const { data } = await axios.get(url);
-  console.log(data);
+  return data;
 }
 
 export default getInfoByIp;

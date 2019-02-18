@@ -6,8 +6,9 @@ program
   .version(version)
   .description(description)
   .arguments('[ip]')
-  .action((ip) => {
-    console.log(getInfoByIp(ip));
+  .action(async (ip) => {
+    const result = await getInfoByIp(ip);
+    console.log(result);
   });
 
 export default () => {
